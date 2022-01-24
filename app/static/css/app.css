@@ -1,0 +1,375 @@
+body {
+    padding-top: 5rem;
+}
+.move_over{
+   float: right;
+}
+
+.form_login_container{
+    border: 2px solid #32c3d8;
+    border-radius: 5px;
+    width: 500px;
+    height: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form_register_container{
+    border: 2px solid #32c3d8;
+    border-radius: 5px;
+    width: 500px;
+    height: 820px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input_field{
+    width: 300px;
+    border-radius:15px;
+    outline: none;
+}
+
+.login_form{
+ padding-top: 20px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+
+}
+
+.tag{
+    text-align: center;
+}
+
+.iso_size{
+    width:100px;
+    height:100px;
+}
+
+ul{
+   list-style-type: none;
+}
+
+
+.edit_menu{
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 40px;
+
+}
+
+li a:hover {
+  background-color: light grey;
+
+}
+
+.card_holder{
+    display: table;
+
+}
+
+
+.first_box{
+   border-radius: 40px;
+   width: 85%;
+    display: block;
+    margin-bottom: 20px;
+
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: green;
+    text-decoration: none;
+}
+
+}
+
+
+.second_box{
+    width: 85%;
+    display: block;
+    border-radius: 40px;
+    margin-bottom: 20px;
+
+
+}
+
+.gov_img{
+   height:137px;
+}
+
+.row{
+    padding-left: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;y
+}
+
+*{
+ box-sizing: border-box;
+}
+
+.align_text{
+    padding-left: 10px;
+
+
+}
+
+.change{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+.center_it_second{
+  padding-left: 100px;
+}
+
+.center_it{
+    padding-left: 200px;
+}
+
+.container_hidden{
+    width: 0px;
+     height: 0px;
+     overflow: hidden;
+
+}
+
+.title {
+    font-size: 30px;
+    margin: auto;
+    padding: 15px 0px;
+}
+
+#policies-container .card {
+    margin: 10px 0;
+}
+
+#policies-container .card .card-body a{
+    text-decoration: none;
+}
+.ico {
+    width:24px;
+    height:29px;
+}
+
+.fa-trash-alt{
+    line-height: 150%;
+    color: white;
+}
+
+.del_item {
+    float: right;
+}
+
+.header_pic{
+    width: 110px;
+    height: 110px;
+}
+
+#sizethis {
+    height:600px;
+}
+
+#size_this{
+    height:450px;
+}
+
+.request_made{
+    text-align: center;
+}
+
+.arrange_left{
+    margin-left: 25px;
+    color: black;
+}
+
+.arrange_right{
+   text-align:center;
+    color: black;
+}
+
+.danger-text {
+    color: red;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  padding: 5px;
+  width: 33.33%;
+  border-radius: 20px;
+}
+
+.sizeit{
+    border-radius: 20px;
+}
+
+
+.make_left{
+    width:130px;
+    height:130px;
+}
+
+
+.pullLeft{
+ width:300px;
+ height:300px;
+}
+
+.hasImage:hover section {
+  background-color: rgba(5, 5, 5, 0.4);
+}
+.hasImage:hover button:hover {
+  background: rgba(5, 5, 5, 0.45);
+}
+
+#overlay p,
+.opage {
+  opacity: 0;
+}
+
+#overlay.draggedover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#overlay.draggedover p,
+#overlay.draggedover i {
+  opacity: 1;
+}
+
+.group:hover .group-hover\:text-blue-800 {
+  color: #2b6cb0;
+}
+
+ @media screen {
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+            }
+
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+            }
+
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 400;
+                src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+            }
+
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 700;
+                src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+            }
+        }
+
+        /* CLIENT-SPECIFIC STYLES */
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* RESET STYLES */
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        /* iOS BLUE LINKS */
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* MOBILE STYLES */
+        @media screen and (max-width:600px) {
+            h1 {
+                font-size: 32px !important;
+                line-height: 32px !important;
+            }
+        }
+
+        /* ANDROID CENTER FIX */
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+
+
+.gradient {
+background: linear-gradient(90deg, #530b57, #fff70d 100%);
+}
+
+.bg-color {
+background-color: #530b57;
+border-color: #530b57;
+}
+
+.adminDD{
+color: #530b57
+}
+.adminDD2{
+border-color: #530b57
+}
+
+.wrap-word{
+overflow-wrap: break-word;
+}
+
+.button-color{
+background-color: #6617cb;
+      background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%);
+      box-shadow: 0 0 0 0 #ec008c, 0.2rem 0.2rem 30px #6617cb;
+}

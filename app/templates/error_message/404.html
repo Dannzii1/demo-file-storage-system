@@ -1,0 +1,22 @@
+{% extends "error_message/base.html" %}
+{% block title_desc %}Resource Not Found{% endblock title_desc %}
+{% block main %}
+<div class="bg-gradient-to-r from-purple-300 to-blue-200">
+    <div class="w-9/12 m-auto py-16 min-h-screen flex items-center justify-center">
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg pb-8">
+            <div class="grid justify-items-center border-t border-gray-200 text-center pt-8">
+                <img src="{{ url_for('static', filename='img/Shirt-Logo-New_003-CROPPED.png' ) }}" alt="J-TEC logic"
+                     class="w-30 h-30" />
+                <h1 class="text-5xl font-medium py-8">Resource Not Found</h1>
+                    <div class="text-2xl pb-8 px-12 md:px-24 font-sm">
+                        We couldn't find what you were looking for. Try going back to the home page
+                    </div>
+                <a class="bg-gradient-to-r from-purple-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 text-white font-semibold
+                    px-6 py-3 rounded-md mr-6" href="{{ url_for('home') }}">
+                        HOME
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

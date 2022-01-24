@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light navbar-expand-md text-dark bg-light px-4 sm:px-6 lg:px-8 rounded-b-lg shadow-lg rounded-lg" >
+   {% if on_admin_dashboard %}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="collapse navbar-collapse justify-content-end navbar-expand-lg navbar-light">
+     <div class="navbar-nav ">
+      <ul class="navbar-nav mr-auto">
+         <li>
+            <a class="btn btn-outline-danger" href="{{url_for('logout')}}" role="button">
+               <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </li>
+      </ul>
+    </div>
+     </div>
+    {% endif %}
+
+      {% if admin %}
+    <div class="collapse navbar-collapse justify-content-end navbar-expand-lg navbar-light">
+     <div class="navbar-nav ">
+      <ul class="navbar-nav mr-auto">
+        <li  class="nav-item">
+            <a class="btn bg-yellow-400 mr-8 hover:text-white" href="{{url_for('admin_dashboard')}}" role="button">
+                Dashboard
+            </a>
+        </li>
+         <li>
+            <a class="btn btn-outline-danger" href="{{url_for('logout')}}" role="button">
+               <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+        </li>
+      </ul>
+    </div>
+     </div>
+    {% endif %}
+
+
+</nav>

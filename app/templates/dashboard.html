@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% include 'flash_messages.html' %}
+<nav class="navbar navbar-light bg-transparent mt-11">
+
+    {% include 'upload_file.html' %}
+</nav>
+<div>
+    <div>
+        <h1 class="text-3xl font-bold adminDD text-center mb-12">
+            {{User}} Dashboard
+        </h1>
+    </div>
+</div>
+ <div class="mb-6">
+ <div class="col-12">
+    {% if (files | length) == 0 %}
+     <img class="mx-auto w-48 mt-16" src="{{url_for('static', filename='img/choose.svg')}}"/>
+                <h3 class="pt-8 pb-3 font-semibold sm:text-lg adminDD text-center">
+                    You currently do not have any files uploaded, please upload files and view them here.
+                </h3>
+    {% endif %}
+    {% for file in files %}
+<div class="justify-center">
+   <div class="container mx-auto max-w-xs rounded-lg overflow-hidden shadow-lg my-2 bg-white">
+      <div class="relative mb-6">
+              {% if file.file_name.split('.')[-1] == 'pdf' %}
+                  <img class='w-1/2 mx-20' src="{{url_for('static', filename='img/pdf-ico.png')}}" alt="pdf icon">
+              {% elif file.file_name.split('.')[-1] in ['docx', 'docs'] %}
+                  <img class='w-1/2 mx-20' src="{{url_for('static', filename='img/doc.ico')}}" alt="document icon">
+               {% elif file.file_name.split('.')[-1] == 'mp4' %}
+                <img class='w-1/2 mx-20' src="{{url_for('static', filename='img/video.ico')}}" alt="video icon">
+              {% endif %}
+      </div>
+      <div class=" px-6 text-center">
+         <div class="posts">
+             <a class="hover:no-underline hover:adminDD" href="{{url_for('get_file', file_id=file.id)}}" target='_blank'>
+                <p class="text-lg wrap-word">{{ file.file_name.split('.')[-2].replace('_', ' ') }}</p>
+              </a>
+             <div class="text-center">
+             <button class="mx-20 my-2 mb-2 inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-danger rounded-lg" type="button" data-toggle="modal" data-target="#deletModel{{file}}">
+                        Delete <i class="fas fa-trash"></i>
+             </button>
+         </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+    </div>
+  </div>
+ <div class="modal fade" id="deletModel{{file}}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10 my-2">
+            <!-- Heroicon name: outline/exclamation -->
+            <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+      <div class="text-center">
+          <h3 class="text-lg leading-6 font-medium text-gray-900 mt-3" id="modal-title">Delete Record</h3>
+      </div>
+      <div class="modal-body mt-2">
+          <p class="text-lg text-gray-500">
+              Are you sure you want to <b>delete the {{file.file_name.split('.')[-2].replace('_', ' ')}}</b>?
+              This action will <b>permanently</b> delete this file and <b>cannot be undone.</b>
+          </p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bg-indigo-400 text-white" data-dismiss="modal">Close</button>
+        <a type="button" class="btn inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2
+            btn-outline-danger hover:bg-red-600 hover:text-white text-base font-medium"
+            href="{{ url_for('del_file', file_id=file.id) }}" role="button">
+                Delete
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+  {% if (files | length) > 0 %}
+    {% include 'pagination.html' %}
+  {% endif %}
+{%endblock%}

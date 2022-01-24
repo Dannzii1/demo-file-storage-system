@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Demo Document Site</title>
+    <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='img/doc.ico')}}">
+    <link href="{{ url_for('static', filename='bootstrap-4.0.0-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='fontawesome-5.15.1-web/css/all.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    {% include "header.html" %}
+</head>
+   <main>
+       <div class="container">
+           {%block main%} {%endblock%}
+       </div>
+   </main>
+    <footer class="footer bg-white" >
+        <div class="container container mx-auto px-6">
+            {% include "footer.html" %}
+        </div>
+    </footer>
+<script src="{{ url_for('static', filename='js/jquery-3.5.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper-2.5.4.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>

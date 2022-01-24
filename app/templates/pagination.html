@@ -1,0 +1,59 @@
+<nav aria-label="Page navigation for documents">
+  <ul class="pagination justify-content-end">
+
+    {% if page.page > 1%}
+      <li class="page-item"><a class="page-link form-link" href="{{url_for(request.endpoint, page=1)}}">First</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">First</span></li>
+    {% endif %}
+
+    {% if page.page <= 1 %}
+      <li class="page-item disabled">
+        <span class="page-link">&laquo;</span>
+      </li>
+    {% else %}
+      <li class="page-item">
+        <a class="page-link form-link" href="{{url_for(request.endpoint, page=page.page-1)}}">&laquo;</a>
+      </li>
+    {% endif %}
+
+    {% if page.page-3 >= 1 %}
+      <li class="page-item"><a class="page-link form-link" href="{{url_for(request.endpoint, page=page.page-3)}}">{{page.page-3}}</a></li>
+    {% endif %}
+    {% if page.page-2 >= 1 %}
+      <li class="page-item"><a class="page-link form-link" href="{{url_for(request.endpoint, page=page.page-2)}}">{{page.page-2}}</a></li>
+    {% endif %}
+    {% if page.page-1 >= 1 %}
+      <li class="page-item"><a class="page-link form-link" href="{{url_for(request.endpoint, page=page.page-1)}}">{{page.page-1}}</a></li>
+    {% endif %}
+
+    <li class="page-item active"><a class="page-link" href="#">{{page.page}}</a></li>
+
+    {% if page.page+1 <= page.pages %}
+      <li class="page-item"><a class="page-link form-link" href="{{url_for(request.endpoint, page=page.page+1)}}">{{page.page+1}}</a></li>
+    {% endif %}
+    {% if page.page+2 <= page.pages %}
+      <li class="page-item"><a class="page-link form-link" href="{{url_for(request.endpoint, page=page.page+2)}}">{{page.page+2}}</a></li>
+    {% endif %}
+    {% if page.page+3 <= page.pages %}
+      <li class="page-item"><a class="page-link form-link" href="{{url_for(request.endpoint, page=page.page+3)}}">{{page.page+3}}</a></li>
+    {% endif %}
+
+    {% if page.page >= page.pages %}
+      <li class="page-item disabled">
+        <span class="page-link">&raquo;</span>
+      </li>
+    {% else %}
+      <li class="page-item">
+        <a class="page-link form-link" href="{{url_for(request.endpoint, page=page.page+1)}}">&raquo;</a>
+      </li>
+    {% endif %}
+
+    {% if page.page < page.pages %}
+      <li class="page-item"><a class="page-link" href="{{url_for(request.endpoint, page=page.pages)}}">Last</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">Last</span></li>
+    {% endif %}
+
+  </ul>
+</nav>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <title> Jtec QMS - {% block title_desc %}{% endblock title_desc %} </title>
+        <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='img/Shirt-Logo-New_003-CROPPED.png')}}">
+        <link href="{{ url_for('static', filename='bootstrap-4.0.0-dist/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        {% block link %}{% endblock link %}
+    </head>
+    <body>
+        {%block main%} {%endblock%}
+        {% block scripts %}{% endblock scripts %}
+    </body>
+</html>

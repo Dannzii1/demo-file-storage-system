@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="modal fade" id="staticBackdrop deletemodal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10 my-2">
+            <!-- Heroicon name: outline/exclamation -->
+            <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+          </div>
+      <div class="text-center">
+          <h3 class="text-lg leading-6 font-medium text-gray-900 mt-3" id="modal-title">Delete Record</h3>
+      </div>
+      <div class="modal-body mt-2">
+          <p class="text-lg text-gray-500">
+              Are you sure you want to <b>delete the policy</b>?
+              This action will <b>permanently</b> delete this policy and <b>cannot be undone.</b>
+          </p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn bg-indigo-400 text-white" data-dismiss="modal">Close</button>
+        <a type="button" class="btn inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2
+            btn-outline-danger hover:bg-red-600 hover:text-white text-base font-medium"
+            href="{{form_data}}" role="button">
+                Delete
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
