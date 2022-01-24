@@ -182,7 +182,7 @@ def registration():
                 flash("Registration Successful", 'success')
                 app.logger.info(
                     "{} has registered successfully".format(username))
-                return redirect(url_for('registration'))
+                return redirect(url_for('login'))
             else:
                 flash('Please check your your passwords, ensure they match', 'info')
                 app.logger.info("{} attempted to register".format(current_user.username))
